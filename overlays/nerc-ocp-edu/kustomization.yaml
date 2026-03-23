@@ -1,7 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../../imagestreams/cuda-jupyter-tensorflow
+  # - ../../imagestreams/cuda-jupyter-tensorflow
+  - ../../imagestreams/csw-base-cuda-minimal
+  - ../../imagestreams/csw-base-pytorch
   - ../../imagestreams/jupyter-cpp-cling
   - ../../imagestreams/jupyter-rust
   - ../../imagestreams/vscode-cpp-cling
@@ -11,4 +13,6 @@ resources:
   - ../../imagestreams/rclone
   - ../../imagestreams/anythingllm
   - ../../imagestreams/rstudio
-  - ../../imagestreams/altastata-jupyter-datascience
+  # - ../../imagestreams/altastata-jupyter-datascience
+  - ../../imagestreams/cuda-jupyter-langchain
+  - ../../imagestreams/odh-tec

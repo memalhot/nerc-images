@@ -23,3 +23,5 @@ Below is an overview, technical information, installed packages, and how to get 
 | [anythingllm](https://github.com/nerc-project/llm-on-nerc/tree/main/llm-clients/anythingllm) | An OpenShift AI Image running AnythingLLM. |
 | [rstudio](https://github.com/opendatahub-io-contrib/workbench-images/tree/main/recipes/rstudio-r-c9s-py311_2023c_20230922) | An OpenShift AI Image running RStudio. |
 | [altastata-jupyter-datascience](https://github.com/SergeVil/altastata-python-package) | An OpenShift AI Image running Jupyter Lab for data science development at the AltaStata Fortified Data Lake. |
+| [cuda-jupyter-langchain](https://github.com/rh-aiservices-bu/workbench-images/tree/main/recipes/cuda-jupyter-langchain-c9s-py311_2023c_20230922) | An OpenShift AI Image running Jupyter Lab with Langchain and CUDA for GPUs. |
+| [odh-tec](https://github.com/rh-aiservices-bu/odh-tec/) | Open Data Hub Tools & Extensions Companion (ODH-TEC) is a unified storage tool enabling seamless file management across Open Data Hub, Red Hat OpenShift AI, and Podman using S3 and local storage. |
