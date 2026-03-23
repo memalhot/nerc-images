@@ -18,4 +18,5 @@ resources:
   - ../../imagestreams/vscode-go
   - ../../imagestreams/ai-telemetry-workbench
   - ../../imagestreams/cuda-jupyter-langchain
-    - ../../imagestreams/odh-tec
+  - ../../imagestreams/odh-tec
+  

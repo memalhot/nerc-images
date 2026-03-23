@@ -17,7 +17,7 @@ metadata:
     # internal.config.kubernetes.io/previousNamespaces: default
     # opendatahub.io/notebook-image-creator: ''
     opendatahub.io/notebook-image-url: >-
-      https://github.com/rh-aiservices-bu/llm-on-openshift/tree/main/llm-clients/anythingllm
+      https://github.com/nerc-project/llm-on-nerc/tree/main/llm-clients/anythingllm
     opendatahub.io/notebook-image-name: >-
       AnythingLLM
     opendatahub.io/notebook-image-desc: |-
