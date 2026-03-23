@@ -4,10 +4,17 @@ metadata:
   name: odh-tec
   namespace: redhat-ods-applications
   labels:
-    opendatahub.io/notebook-image: "true"
+    # app.kubernetes.io/created-by: ''
+    app.kubernetes.io/part-of: workbenches
+    app.opendatahub.io/workbenches: 'true'
+    component.opendatahub.io/name: notebooks
+    opendatahub.io/component: 'true'
+    opendatahub.io/dashboard: 'true'
+    opendatahub.io/notebook-image: 'true'
   annotations:
+    # opendatahub.io/notebook-image-order: '12'
     opendatahub.io/notebook-image-url: >-
-      https://github.com/rh-aiservices-bu/odh-tec/
+      quay.io/rh-aiservices-bu/odh-tec:latest
     opendatahub.io/notebook-image-name: >-
       ODH-TEC
     opendatahub.io/notebook-image-desc: |-
@@ -22,11 +29,16 @@ spec:
   lookupPolicy:
     local: true
   tags:
-    - name: latest
-      annotations: null
+    - name: 2.1.1
+      annotations:
+        # opendatahub.io/notebook-build-commit: 'xyz'
+        opendatahub.io/notebook-python-dependencies: '[]'
+        opendatahub.io/notebook-software: '[{"name":"ODH-TEC","version":"2.1.1","visible":true}]'
+        opendatahub.io/workbench-image-recommended: 'false'
+        openshift.io/imported-from: 'quay.io/rh-aiservices-bu/odh-tec:2.1.1'
       from:
         kind: DockerImage
-        name: 'quay.io/rh-aiservices-bu/odh-tec:latest'
+        name: 'quay.io/rh-aiservices-bu/odh-tec:2.1.1'
       importPolicy:
         scheduled: true
       referencePolicy:

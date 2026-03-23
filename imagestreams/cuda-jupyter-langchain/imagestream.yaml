@@ -4,10 +4,16 @@ metadata:
   name: cuda-jupyter-langchain
   namespace: redhat-ods-applications
   labels:
-    opendatahub.io/notebook-image: "true"
+    # app.kubernetes.io/created-by: ''
+    app.kubernetes.io/part-of: workbenches
+    app.opendatahub.io/workbenches: 'true'
+    component.opendatahub.io/name: notebooks
+    opendatahub.io/component: 'true'
+    opendatahub.io/dashboard: 'true'
+    opendatahub.io/notebook-image: 'true'
   annotations:
     opendatahub.io/notebook-image-url: >-
-      https://github.com/rh-aiservices-bu/workbench-images/tree/main/recipes/cuda-jupyter-langchain-c9s-py311_2023c_20230922
+      quay.io/opendatahub-contrib/workbench-images:cuda-jupyter-langchain-c9s-py311_2023c_latest
     opendatahub.io/notebook-image-name: >-
       Jupyter Langchain CUDA
     opendatahub.io/notebook-image-desc: |-
@@ -18,8 +24,13 @@ spec:
   lookupPolicy:
     local: true
   tags:
-    - name: 1.0.0
+    - name: latest
       annotations: null
+        # opendatahub.io/notebook-build-commit: 'xyz'
+        opendatahub.io/notebook-python-dependencies: '[{"name":"Python","version":"v3.11","visible":true}]'
+        opendatahub.io/notebook-software: '[{"name":"CUDA","version":"11.8","visible":true}]'
+        opendatahub.io/workbench-image-recommended: 'false'
+        openshift.io/imported-from: 'quay.io/opendatahub-contrib/workbench-images:cuda-jupyter-langchain-c9s-py311_2023c_latest'
       from:
         kind: DockerImage
         name: 'quay.io/opendatahub-contrib/workbench-images:cuda-jupyter-langchain-c9s-py311_2023c_latest'

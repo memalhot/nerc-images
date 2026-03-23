@@ -4,25 +4,41 @@ metadata:
   name: anythingllm
   namespace: redhat-ods-applications
   labels:
-    opendatahub.io/notebook-image: "true"
+    # app.kubernetes.io/created-by: ''
+    app.kubernetes.io/part-of: workbenches
+    app.opendatahub.io/workbenches: 'true'
+    component.opendatahub.io/name: notebooks
+    opendatahub.io/component: 'true'
+    opendatahub.io/dashboard: 'true'
+    opendatahub.io/notebook-image: 'true'
   annotations:
+    # internal.config.kubernetes.io/previousKinds: ImageStream
+    # internal.config.kubernetes.io/previousNames: custom-anythingllm
+    # internal.config.kubernetes.io/previousNamespaces: default
+    # opendatahub.io/notebook-image-creator: ''
     opendatahub.io/notebook-image-url: >-
-      https://github.com/nerc-project/llm-on-nerc/tree/main/llm-clients/anythingllm
+      quay.io/rh-aiservices-bu/anythingllm-workbench:latest
     opendatahub.io/notebook-image-name: >-
       AnythingLLM
     opendatahub.io/notebook-image-desc: |-
       AnythingLLM is a collection of open-source LLMs and tools for building and
       deploying AI applications. It includes models for text generation, image
       generation, and more.
+    opendatahub.io/recommended-accelerators: '[]'
 spec:
   lookupPolicy:
     local: true
   tags:
-    - name: 1.0.0
-      annotations: null
+    - name: 1.9.1
+      annotations:
+        # opendatahub.io/notebook-build-commit: 'xyz'
+        # opendatahub.io/notebook-python-dependencies: '[{"name":"Python","version":"v3.11","visible":true},{"name":"PyTorch","version":"2.4","visible":true}]'
+        opendatahub.io/notebook-software: '[{"name":"AnythingLLM","version":"1.9.1","visible":true}]'
+        # opendatahub.io/workbench-image-recommended: 'false'
+        openshift.io/imported-from: 'quay.io/rh-aiservices-bu/anythingllm-workbench:1.9.1'
       from:
         kind: DockerImage
-        name: 'quay.io/rh-aiservices-bu/anythingllm-workbench'
+        name: 'quay.io/rh-aiservices-bu/anythingllm-workbench:1.9.1'
       importPolicy:
         scheduled: true
       referencePolicy:
