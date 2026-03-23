@@ -13,7 +13,7 @@ metadata:
     opendatahub.io/notebook-image: 'true'
   annotations:
     opendatahub.io/notebook-image-url: >-
-      quay.io/opendatahub-contrib/workbench-images:cuda-jupyter-langchain-c9s-py311_2023c_latest
+      https://github.com/rh-aiservices-bu/workbench-images/tree/main/recipes/cuda-jupyter-langchain-c9s-py311_2023c_20230922
     opendatahub.io/notebook-image-name: >-
       Jupyter Langchain CUDA
     opendatahub.io/notebook-image-desc: |-
