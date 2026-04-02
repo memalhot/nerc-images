@@ -16,3 +16,5 @@ resources:
   # - ../../imagestreams/altastata-jupyter-datascience
   - ../../imagestreams/cuda-jupyter-langchain
   - ../../imagestreams/odh-tec
+  - ../../imagestreams/base-ope-image
+  - ../../imagestreams/ucsls-f24

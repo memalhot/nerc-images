@@ -19,3 +19,5 @@ resources:
   - ../../imagestreams/ai-telemetry-workbench
   - ../../imagestreams/cuda-jupyter-langchain
   - ../../imagestreams/odh-tec
+  - ../../imagestreams/base-ope-image
+  - ../../imagestreams/ucsls-f24
