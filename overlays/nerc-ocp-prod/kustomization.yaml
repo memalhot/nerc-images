@@ -21,3 +21,4 @@ resources:
   - ../../imagestreams/odh-tec
   - ../../imagestreams/base-ope-image
   - ../../imagestreams/ucsls-f24
+  - ../../imagestreams/pytorch-nglview
