@@ -27,3 +27,4 @@ Below is an overview, technical information, installed packages, and how to get 
 | [odh-tec](https://github.com/rh-aiservices-bu/odh-tec/) | Open Data Hub Tools & Extensions Companion (ODH-TEC) is a unified storage tool enabling seamless file management across Open Data Hub, Red Hat OpenShift AI, and Podman using S3 and local storage. |
 | [base-ope-image](https://github.com/nerc-images/base-ope-image) | An OpenShift AI Image that has the basic Jupyter Notebook UI. |
 | [ucsls-F24](https://github.com/nerc-images/ucsls-F24) | An OpenShift AI Image designed for courses, speficially the Boston University class CS210. |
+| [pytorch-nglview](https://github.com/memalhot/pytorch-nglview/tree/ngl) | An Openshift AI image built on the pytorch image for computational biology and chemistry visualizations with nglview. |
