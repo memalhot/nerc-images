@@ -1,0 +1,53 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: jupyter-pytorchv2.11-cuda
+  namespace: redhat-ods-applications
+  labels:
+    app.kubernetes.io/part-of: workbenches
+    opendatahub.io/component: "true"
+    opendatahub.io/dashboard: "true"
+    opendatahub.io/notebook-image: "true"
+    platform.opendatahub.io/part-of: workbenches
+  annotations:
+    opendatahub.io/notebook-image-url: >-
+      https://github.com/nerc-images/jupyter-pytorchv2.11
+    opendatahub.io/notebook-image-name: "JupyterLab + PyTorch 2.11 (CUDA)"
+    opendatahub.io/recommended-accelerators: '["nvidia.com/gpu"]'
+    opendatahub.io/notebook-image-desc: >-
+      CUDA-enabled JupyterLab image for large-scale data science and ML workloads.
+      Includes PyTorch, Ray, Kubeflow, CodeFlare, core Python data science
+      libraries, visualization tooling, database connectors, and OpenShift AI
+      integrations.
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+    - name: "latest"
+      annotations:
+        opendatahub.io/notebook-python-dependencies: |
+          [
+            {"name":"torch","version":"2.11.0+cu128"},
+            {"name":"torchvision","version":"0.26.0+cu128"},
+            {"name":"torchaudio","version":"2.11.0+cu128"},
+            {"name":"numpy","version":"2.4.3"},
+            {"name":"pandas","version":"2.2.3"},
+            {"name":"scikit-learn","version":"1.6.1"},
+            {"name":"scipy","version":"1.15.3"},
+            {"name":"matplotlib","version":"3.10.5"}
+          ]
+        opendatahub.io/notebook-software: |
+          [
+            {"name":"Python","version":"3.11"},
+            {"name":"JupyterLab","version":"4.2.7"},
+            {"name":"PyTorch","version":"2.11.0"},
+            {"name":"CUDA Toolkit","version":"12.8.1"}
+          ]
+        opendatahub.io/workbench-image-recommended: "true"
+      from:
+        kind: DockerImage
+        name: quay.io/nerc-images/pytorchv2.11-cuda:latest
+      importPolicy:
+        importMode: Legacy
+      referencePolicy:
+        type: Source

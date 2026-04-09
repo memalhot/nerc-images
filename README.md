@@ -28,3 +28,4 @@ Below is an overview, technical information, installed packages, and how to get 
 | [base-ope-image](https://github.com/nerc-images/base-ope-image) | An OpenShift AI Image that has the basic Jupyter Notebook UI. |
 | [ucsls-F24](https://github.com/nerc-images/ucsls-F24) | An OpenShift AI Image designed for courses, speficially the Boston University class CS210. |
 | [pytorch-nglview](https://github.com/memalhot/pytorch-nglview/tree/ngl) | An Openshift AI image built on the pytorch image for computational biology and chemistry visualizations with nglview. |
+| [pytorch-v2.11](https://github.com/nerc-images/jupyter-pytorchv2.11) | An Openshift AI image built with Pytorch version 2.11.0 and Cuda toolkit 12.8.1. |
